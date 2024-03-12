@@ -17,7 +17,8 @@ blacklist = [
     "this",
     "math",
     "the",
-    "about",
+    "about"
+    "what is",
 ]
 question = str(input("Ask me a question: "))
 question = question.lower()
@@ -43,5 +44,26 @@ if blacklisted < 1:
     print(completion.choices[0].message.content)
 else:
     print(
-        "Im sorry, I cannot process you request because that command violates our policies"
+        "I\'m sorry, I cannot process you request because that command violates our policies." 
     )
+    print('However, I can provide an example of your problem.')    
+    print('Tell me what you need help with. For example: \'Solving Equations\' or \'Essays\' or \'Physics\'. Alternatively, type EXIT to exit')
+    explain = str(input(''))
+    if explain.upper() == 'EXIT':
+        exit()
+    else:
+        explainer = client.chat.completions.create(
+        model="gpt-3.5-turbo",
+        messages=[
+            {
+                "role": "system",
+                "content": "You are a general purpose assistant, that helps answer general questions",
+            },
+            {"role": "user", "content": f"Generate a random example of {explain} and explain it."},
+        ],
+    )
+        print(explainer.choices[0].message.content)
+        
+
+
+input('Press enter to exit')
