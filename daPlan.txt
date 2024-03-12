@@ -1,4 +1,1 @@
-so like we need to solve a problem, and the problem is:
-Unemployment and Underemployment: High levels of unemployment and underemployment can lead to financial instability, decreased well-being, and social unrest.
-
-so like we make a thing so you like put in your skills and it searches the internet and finds a job for you
+so we make this thing ai that's basically like chat gpt but if you ask it to do an assignment it refuses and it says like "Thats not a good use of ai" but you can make it come up with examples and stuff. We're gonna call it SchoolGPT. But apparently that already happened so we try do more stuff
